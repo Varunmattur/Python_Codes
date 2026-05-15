@@ -1,70 +1,248 @@
 # Python Codes 🐍
 
-A comprehensive collection of small but important Python scripts and code snippets designed to strengthen fundamental programming logic and prepare for technical interviews and coding rounds.
+A collection of essential Python programs demonstrating fundamental programming concepts, perfect for understanding basic logic and preparing for technical interviews.
 
 ## 📋 About
 
-**Python Codes** is a curated repository of essential Python programs covering basic to intermediate concepts. These concise yet powerful scripts are perfect for:
-- 🎓 Learning fundamental programming concepts
-- 💼 Preparing for technical interviews
-- 🏆 Practicing problem-solving skills
-- 📚 Understanding core algorithms and data structures
-- 🔍 Quick reference for common coding patterns
+**Python Codes** is a repository containing 10 beginner to intermediate level Python scripts that cover core programming concepts. Each script is concise, well-commented, and focuses on important logical thinking required for:
+- 🎓 Building fundamental programming skills
+- 💼 Preparing for technical interviews and coding rounds
+- 🏆 Understanding core Python concepts
+- 📚 Quick reference for common problems
+- 🔍 Learning problem-solving approaches
 
-Whether you're a beginner learning Python or preparing for your next coding interview, this repository provides bite-sized solutions that demonstrate important programming principles.
+## 📂 Code Structure
 
-## 📂 What's Inside
+This repository contains individual Python files organized by problem:
 
-This repository contains Python scripts organized by topics:
+```
+Python_Codes/
+├── q1.py                 # Print numbers from 1 to 5
+├── q2.py                 # Calculate squares from 1 to 5
+├── q3.py                 # Find even numbers between 1 to 10
+├── q4.py                 # Calculate sum from 1 to 10
+├── q5.py                 # Reverse a string
+├── q6.py                 # Count vowels in a string
+├── q7.py                 # Generate first 10 Fibonacci numbers
+├── q8.py                 # Calculate factorial of a number
+├── q9.py                 # Check if a number is prime
+├── q10.py                # Count character frequency
+└── README.md             # This file
+```
 
-### Core Concepts
-- **Variables & Data Types** - Working with strings, numbers, lists, dictionaries, tuples, sets
-- **Control Flow** - Conditional statements (if/else), loops (for, while)
-- **Functions** - Function definition, parameters, return values, scope
-- **String Manipulation** - String methods, formatting, pattern matching
+## 🎯 Programs Overview
 
-### Data Structures
-- **Lists** - Creation, manipulation, sorting, searching
-- **Dictionaries** - Key-value pairs, iteration, operations
-- **Tuples & Sets** - Immutable sequences, unique elements
-- **Stacks & Queues** - LIFO, FIFO implementations
-- **Linked Lists** - Node-based data structures
+### Q1: Print Numbers from 1 to 5
+```python
+#no from 1 to 5
+for i in range(1,6):
+    if i<5:
+        print(i,end=" ")
+    else:
+        print(i,end="")
+```
+**Concept**: Loops, conditional statements, string formatting
 
-### Algorithms
-- **Sorting** - Bubble sort, insertion sort, merge sort, quick sort
-- **Searching** - Linear search, binary search
-- **Recursion** - Recursive functions, problem decomposition
-- **Pattern Matching** - String pattern finding algorithms
-- **Mathematical Algorithms** - Prime numbers, GCD, Fibonacci, factorials
+---
 
-### Problem Solving
-- **String Problems** - Palindromes, anagrams, rotation
-- **Array/List Problems** - Two sum, reverse, duplicate finding
-- **Math Problems** - Number manipulation, series, sequences
-- **Logic Puzzles** - Brain teasers and logical problems
+### Q2: Calculate Squares from 1 to 5
+```python
+#square from 1 to 5
+for i in range(1,6):
+    print(i**2,end=" ")
+```
+**Output**: `1 4 9 16 25`  
+**Concept**: Loop iteration, exponentiation operator
 
-### Object-Oriented Programming
-- **Classes & Objects** - Class definition, inheritance, polymorphism
-- **Encapsulation** - Private/public methods, properties
-- **Abstraction** - Abstract classes, interfaces
-- **Design Patterns** - Common OOP patterns
+---
 
-## 🎯 Why These Codes Matter
+### Q3: Find Even Numbers from 1 to 10
+```python
+#even no b/w 1 to 10
+for i in range(1,11,1):
+    if(i%2==0):
+        print(i,end=" ")
+```
+**Output**: `2 4 6 8 10`  
+**Concept**: Loops, modulo operator, conditional logic
 
-✅ **Interview Preparation** - Cover frequently asked problems in technical rounds  
-✅ **Logic Building** - Strengthen your understanding of fundamental concepts  
-✅ **Code Efficiency** - Learn optimal approaches to solve problems  
-✅ **Quick Learning** - Small, focused examples for quick comprehension  
-✅ **Reference Guide** - Quick lookup for common patterns and solutions  
+---
+
+### Q4: Sum of Numbers from 1 to 10
+```python
+#sum of no from 1 to 10
+sum = 0
+for i in range(1,11):
+    sum+=i
+print("sum =",sum)
+print(f"sum = {sum}")
+```
+**Output**: `55`  
+**Concept**: Accumulation, f-strings, variable operations
+
+---
+
+### Q5: Reverse a String
+```python
+#reverse the given string
+word="Python"
+for i in range(len(word)-1,-1,-1):
+    print(word[i].upper(),end="")
+```
+**Output**: `NOHTYP`  
+**Concept**: String manipulation, negative indexing, string methods
+
+---
+
+### Q6: Count Vowels in a String
+```python
+word=input("Enter the word")
+vowel='aeiouAEIOU'
+count=0
+v=''
+for i in word:
+    if i in vowel:
+        v=v+" "+i
+        count+=1
+print(count)
+print(v)
+```
+**Concept**: String iteration, membership testing, input handling
+
+---
+
+### Q7: Fibonacci Series (First 10 Numbers)
+```python
+#first 10 fibbonacci series
+f0=0
+f1=1
+print(f0,end=" ")
+print(f1,end=" ")
+for i in range(1,9):
+    f2=f0+f1
+    print(f2,end=" ")
+    f0=f1
+    f1=f2
+```
+**Output**: `0 1 1 2 3 5 8 13 21 34`  
+**Concept**: Series generation, variable assignment, loop logic
+
+---
+
+### Q8: Calculate Factorial
+```python
+#factorial of the no
+pro=1
+n=int(input())
+for i in range(1,n+1):
+    pro=pro*i
+print(pro)
+```
+**Concept**: Mathematical operations, input conversion, loop accumulation
+
+---
+
+### Q9: Check if Number is Prime
+```python
+#no is a prime or not
+prime=True
+n = int(input())
+for i in range(2,n):
+    if(n%i==0):
+        prime=False
+        break
+if prime==False:
+    print(f"{n} is not a prime no.")
+else:
+    print(f"{n} is a prime no.")
+```
+**Concept**: Conditional logic, loop control (break), boolean values
+
+---
+
+### Q10: Character Frequency Counter
+```python
+#frequency of each character
+word = "programming"
+frequency={}
+
+for char in word:
+    if char in frequency:
+        frequency[char]+=1
+    else:
+        frequency[char]=1
+
+for char,count in frequency.items():
+    print(f"'{char}' : {count}")
+```
+**Output**: 
+```
+'p' : 1
+'r' : 2
+'o' : 1
+'g' : 2
+'a' : 1
+'m' : 2
+'i' : 1
+'n' : 1
+```
+**Concept**: Dictionaries, key-value pairs, iteration, conditional dictionary operations
+
+---
+
+## 💡 Core Concepts Covered
+
+✅ **Loop Control**
+- for loops with range()
+- while loops
+- Loop control statements (break, continue)
+- Step values and negative indexing
+
+✅ **Conditional Statements**
+- if/else/elif
+- Comparison operators
+- Boolean logic
+
+✅ **Data Types**
+- Strings and string methods
+- Integers and arithmetic operations
+- Dictionaries and key-value pairs
+- Lists (implicit through iteration)
+
+✅ **String Operations**
+- Indexing and slicing
+- String methods (upper(), lower())
+- String concatenation
+- f-strings for formatting
+
+✅ **Mathematical Concepts**
+- Fibonacci series
+- Factorial calculation
+- Prime number checking
+- Sum and product calculations
+- Modulo operator (%)
+- Exponentiation operator (**)
+
+✅ **Input/Output**
+- input() function
+- print() with formatting
+- End parameter for print statements
+- Variable output
+
+✅ **Dictionary Operations**
+- Creating dictionaries
+- Checking key existence
+- Adding key-value pairs
+- Iterating with items()
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - Python 3.6 or higher
-- Any text editor or IDE (VS Code, PyCharm, etc.)
-- Terminal or command prompt
+- Any text editor or IDE (VS Code, PyCharm, Thonny, etc.)
+- Terminal/Command Prompt
 
-### Installation
+### How to Run
 
 1. **Clone the repository**
    ```bash
@@ -72,195 +250,107 @@ This repository contains Python scripts organized by topics:
    cd Python_Codes
    ```
 
-2. **Run any Python script**
+2. **Run any Python file**
    ```bash
-   python script_name.py
+   python q1.py
+   python q2.py
+   python q3.py
+   # and so on...
    ```
 
 3. **View the code**
    ```bash
-   cat script_name.py
+   cat q1.py
    # or open in your editor
-   code script_name.py
+   code q1.py
    ```
-
-## 📁 File Organization
-
-```
-Python_Codes/
-├── strings/                    # String manipulation problems
-│   ├── palindrome.py
-│   ├── anagram.py
-│   ├── reverse_string.py
-│   └── pattern_matching.py
-├── arrays_lists/              # List and array operations
-│   ├── two_sum.py
-│   ├── find_duplicates.py
-│   ├── rotate_array.py
-│   └── binary_search.py
-├── math_logic/                # Mathematical problems
-│   ├── fibonacci.py
-│   ├── prime_numbers.py
-│   ├── factorial.py
-│   └── gcd_lcm.py
-├── data_structures/           # Data structure implementations
-│   ├── linked_list.py
-│   ├── stack.py
-│   ├── queue.py
-│   └── binary_tree.py
-├── sorting_searching/         # Sorting and searching algorithms
-│   ├── bubble_sort.py
-│   ├── merge_sort.py
-│   ├── quick_sort.py
-│   └── binary_search.py
-├── recursion/                 # Recursive solutions
-│   ├── fibonacci_recursive.py
-│   ├── factorial_recursive.py
-│   └── tower_of_hanoi.py
-├── oops/                      # Object-oriented programming
-│   ├── class_basics.py
-│   ├── inheritance.py
-│   └── polymorphism.py
-└── README.md                  # This file
-```
-
-## 💡 How to Use
-
-1. **Browse through the files** - Look for topics that interest you
-2. **Read the code** - Study the implementation and logic
-3. **Run the script** - Execute it to see the output
-4. **Modify & Experiment** - Change values and test your understanding
-5. **Use as reference** - Copy patterns for your own projects
-
-## 📚 Example Programs
-
-### Finding if a Number is Prime
-```python
-def is_prime(n):
-    if n < 2:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-print(is_prime(17))  # Output: True
-```
-
-### Checking if a String is Palindrome
-```python
-def is_palindrome(s):
-    clean_s = s.lower().replace(" ", "")
-    return clean_s == clean_s[::-1]
-
-print(is_palindrome("A man a plan a canal Panama"))  # Output: True
-```
-
-### Binary Search Implementation
-```python
-def binary_search(arr, target):
-    left, right = 0, len(arr) - 1
-    while left <= right:
-        mid = (left + right) // 2
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] < target:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return -1
-
-arr = [1, 3, 5, 7, 9, 11]
-print(binary_search(arr, 7))  # Output: 3
-```
 
 ## 🎓 Learning Path
 
-**Beginner Level:**
-- Start with basic syntax and variables
-- Move to control flow (if/else, loops)
-- Practice string and list operations
+### Beginner Level
+Start with these programs to understand basics:
+- **Q1-Q4**: Loop basics, range(), basic arithmetic
+- **Q2**: Understanding operators
+- **Q3**: Conditional statements with loops
 
-**Intermediate Level:**
-- Explore functions and recursion
-- Learn about data structures
-- Understand sorting and searching
+### Intermediate Level
+Move to string and data manipulation:
+- **Q5-Q6**: String operations and iteration
+- **Q7**: Series generation logic
+- **Q10**: Dictionary usage and data structures
 
-**Advanced Level:**
-- Master algorithms and optimization
-- Study OOP concepts
-- Practice complex problem-solving
+### Problem Solving
+Understanding algorithms:
+- **Q8**: Factorial (mathematical logic)
+- **Q9**: Prime checking (algorithm optimization)
+- **Q7**: Fibonacci (sequence generation)
 
-## 🤝 Contributing
+## 💪 Why These Programs?
 
-Contributions are welcome! Here's how:
+✅ **Easy to Understand** - Small, focused programs with clear logic  
+✅ **Commonly Asked** - Frequently appear in technical interviews  
+✅ **Multiple Concepts** - Each program teaches multiple concepts  
+✅ **Beginner Friendly** - No complex frameworks or libraries  
+✅ **Fast Learning** - Quick to run and see results  
+
+## 🎯 How to Use These Programs
+
+1. **Read the code** - Understand what each line does
+2. **Run the program** - See the output
+3. **Modify it** - Change values and test
+4. **Solve variations** - Try solving similar problems
+5. **Analyze logic** - Understand the approach and algorithm
+
+## 📝 Interview Preparation Tips
+
+**For each program, understand:**
+- What is the input and output?
+- What algorithm is being used?
+- What is the time complexity?
+- What is the space complexity?
+- Can it be optimized further?
+- What edge cases should be handled?
+
+**Example - Prime Number Check (Q9):**
+- Input: A number n
+- Output: Whether n is prime or not
+- Algorithm: Trial division
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+- Optimization: Check only up to √n
+
+## 🤝 How to Contribute
+
+Have additional Python codes or improvements?
 
 1. Fork the repository
-2. Create a new branch (`git checkout -b feature/new-code`)
-3. Add your Python script with clear comments
-4. Include a brief description of what the code does
-5. Commit your changes (`git commit -m 'Add new Python code'`)
-6. Push to the branch (`git push origin feature/new-code`)
-7. Open a Pull Request
+2. Add your Python script with clear comments
+3. Include a brief description of what it does
+4. Test it thoroughly
+5. Commit and push your changes
+6. Open a Pull Request
 
-## 📝 Code Quality Guidelines
-
-- ✅ Write clear, readable code
-- ✅ Add comments explaining the logic
-- ✅ Follow PEP 8 style guide
-- ✅ Include example usage or test cases
-- ✅ Optimize for clarity over complexity
-
-## 🔗 Resources
+## 📚 Resources for Further Learning
 
 - [Python Official Documentation](https://docs.python.org/3/)
-- [PEP 8 Style Guide](https://pep8.org/)
-- [Real Python Tutorials](https://realpython.com/)
-- [GeeksforGeeks Python](https://www.geeksforgeeks.org/python-programming-language/)
-- [LeetCode - Practice Problems](https://leetcode.com/)
-- [HackerRank - Coding Challenges](https://www.hackerrank.com/)
+- [Python Tutorial - W3Schools](https://www.w3schools.com/python/)
+- [GeeksforGeeks - Python](https://www.geeksforgeeks.org/python-programming-language/)
+- [Real Python](https://realpython.com/)
+- [HackerRank - Python](https://www.hackerrank.com/domains/python)
+- [LeetCode - Easy Problems](https://leetcode.com/problemset/all/?difficulty=EASY&topicSlugs=string)
 
-## 💪 Tips for Interview Preparation
+## 🔗 Related Topics to Explore
 
-1. **Practice Regularly** - Code everyday to build muscle memory
-2. **Understand the Logic** - Don't just memorize solutions
-3. **Optimize Your Code** - Think about time and space complexity
-4. **Test Edge Cases** - Consider boundary conditions
-5. **Communicate** - Explain your approach while coding
-6. **Study Patterns** - Recognize common problem patterns
+- **Algorithms**: Sorting, searching, graph algorithms
+- **Data Structures**: Lists, stacks, queues, trees, graphs
+- **Problem Solving**: Logic building, optimization techniques
+- **Advanced Python**: Classes, OOP, decorators, generators
+- **Competitive Programming**: Coding contests, problem patterns
 
-## 📊 Complexity Analysis
+## 💬 Discussion & Support
 
-Each script should demonstrate understanding of:
-- **Time Complexity** - How runtime scales with input size
-- **Space Complexity** - How memory usage scales with input size
-- **Trade-offs** - Speed vs. memory, readability vs. optimization
-
-## 🎯 Practice Problems by Difficulty
-
-**Easy:**
-- Reverse a string
-- Check palindrome
-- Find maximum in array
-- Count vowels
-
-**Medium:**
-- Two sum problem
-- Merge sorted arrays
-- Rotate array
-- Find duplicates
-
-**Hard:**
-- Merge k sorted lists
-- Longest substring without repeating
-- Word ladder
-- Median of sorted arrays
-
-## 📞 Support & Questions
-
-Have questions or need clarification?
-- 📧 Open an [Issue](https://github.com/Varunmattur/Python_Codes/issues)
-- 💬 Start a [Discussion](https://github.com/Varunmattur/Python_Codes/discussions)
+- 📧 Have questions? Open an [Issue](https://github.com/Varunmattur/Python_Codes/issues)
+- 💡 Want to suggest a program? Start a [Discussion](https://github.com/Varunmattur/Python_Codes/discussions)
 
 ## 📄 License
 
@@ -268,17 +358,18 @@ This project is open source and available under the MIT License.
 
 ## 🙏 Acknowledgments
 
-- Inspired by common interview questions
-- Solutions based on best practices
-- Community contributions and feedback
-- All learners preparing for technical interviews
+- Designed for beginners and interview preparation
+- Common interview questions and solutions
+- Community feedback and contributions
 
 ---
 
 **Made with ❤️ by [Varunmattur](https://github.com/Varunmattur)**
 
 **Repository**: 🐍 Python Codes for Learning & Interviews  
+**Total Programs**: 10  
 **Language**: 100% Python  
+**Difficulty**: Beginner to Intermediate  
 **Last Updated**: November 2024  
 
-**Happy Coding! 🚀**
+**Happy Learning! 🚀**
